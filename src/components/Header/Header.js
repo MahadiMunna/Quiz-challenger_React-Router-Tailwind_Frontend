@@ -9,7 +9,7 @@ const Header = () => {
             </div>
 
             <nav className='flex gap-5 font-semibold text-stone-300'>
-                <NavLink className={({ isActive }) =>isActive ? 'active text-red-500' : 'hover:text-orange-500'} to='/home'>Home</NavLink>
+                <NavLink className={({ isActive }) =>isActive ? 'active text-red-500' : 'hover:text-orange-500'} to='/'>Home</NavLink>
                 <NavLink className={({ isActive }) =>isActive ? 'active text-red-500' : 'hover:text-orange-500'} to='/statistics'>Statistics</NavLink>
                 <NavLink className={({ isActive }) =>isActive ? 'active text-red-500' : 'hover:text-orange-500'} to='/blog'>Blog</NavLink>
                 <NavLink className={({ isActive }) =>isActive ? 'active text-red-500' : 'hover:text-orange-500'} to='/error'>Error Route</NavLink>
