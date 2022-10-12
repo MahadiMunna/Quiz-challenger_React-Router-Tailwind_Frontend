@@ -4,8 +4,6 @@ import {
     ResponsiveContainer,
     ComposedChart,
     Line,
-    Area,
-    Bar,
     XAxis,
     YAxis,
     CartesianGrid,
