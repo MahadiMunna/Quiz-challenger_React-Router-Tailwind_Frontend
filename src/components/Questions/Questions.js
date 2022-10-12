@@ -5,10 +5,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Questions = ({ singleQuestion, correctAns, incorrectAns }) => {
-    const { question, correctAnswer, options } = singleQuestion;
+    const { id, question, correctAnswer, options } = singleQuestion;
 
-    const check = e => {
-        const { value, name } = e.target;
+    const checker = check => {
+        const { value, name } = check.target;
         if (value === name) {
             toast("Correct!")
             correctAns()
@@ -30,21 +30,22 @@ const Questions = ({ singleQuestion, correctAns, incorrectAns }) => {
 
             <div>
                 <div className='mb-2'>
-                    <input type="radio" id={options[0]} value={options[0]} name={correctAnswer} onChange={check} />
+                    <input type="radio" id={id} value={options[0]} name={correctAnswer} onChange={checker} />
                     <label htmlFor=""><span className='ml-2'>{options[0]}</span></label>
-
                 </div>
 
                 <div className='mb-2'>
-                    <input type="radio" id={options[1]} value={options[1]} name={correctAnswer} onChange={check} />
+                    <input type="radio" id={id} value={options[1]} name={correctAnswer} onChange={checker} />
                     <label htmlFor=""><span className='ml-2'>{options[1]}</span></label>
                 </div>
+
                 <div className='mb-2'>
-                    <input type="radio" id={options[2]} value={options[2]} name={correctAnswer} onChange={check} />
+                    <input type="radio" id={id} value={options[2]} name={correctAnswer} onChange={checker} />
                     <label htmlFor=""><span className='ml-2'>{options[2]}</span></label>
                 </div>
+
                 <div className='mb-2'>
-                    <input type="radio" id={options[3]} value={options[3]} name={correctAnswer} onChange={check} />
+                    <input type="radio" id={id} value={options[3]} name={correctAnswer} onChange={checker} />
                     <label htmlFor=""><span className='ml-2'>{options[3]}</span></label>
                 </div>
             </div>
