@@ -1,19 +1,45 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
+import {
+    ResponsiveContainer,
+    ComposedChart,
+    Line,
+    Area,
+    Bar,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    Legend
+  } from "recharts";
 
 const Statistics = () => {
     const topics = useLoaderData();
-    const {name,total} = topics.data;
     console.log(topics)
     return (
-        <LineChart width={500} height={400} data={topics}>
-            <Line type="monotone" dataKey="marks" stroke="#82ca9d" />
-            <XAxis dataKey="name"/>
-            <YAxis/>
-            <Tooltip/>
-        </LineChart>
-    );
+        <div style={{ width: "100%", height: 300 }}>
+          <ResponsiveContainer>
+            <ComposedChart
+              width={500}
+              height={400}
+              data={topics.data}
+              margin={{
+                top: 20,
+                right: 20,
+                bottom: 20,
+                left: 20
+              }}
+            >
+              <CartesianGrid stroke="#f5f5f5" />
+              <XAxis dataKey="name" scale="band" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Line type="monotone" dataKey="total" stroke="#413ea0" />
+            </ComposedChart>
+          </ResponsiveContainer>
+        </div>
+      );
 };
 
 export default Statistics;
