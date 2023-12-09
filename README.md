@@ -1,3 +1,21 @@
+# Quiz Challenger is a quiz app project which is build with React and tailwind
+
+This is a frontend project. If you want to participate in the quiz first you have to select quiz topic and then i will take you in the questions page. Here the quiz topics and quiz questions are coming from server and showing in the frontend. There are some interaction depending on your answers. It will count coorect and wrong answer and shows toast when you answer them. The project hosted in netlify.
+
+# Technologies
+
+> React
+> React router dom
+> React Tostify
+> Tailwind
+> Recharts
+> Netlify
+
+# Live Link: https://calm-sable-2614f4.netlify.app/
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
